@@ -39,5 +39,7 @@
   "Create a free account": "انشاء حساب مجاني",
   "Register": "انشاء حساب",
   "Do you have an account?": "هل تملك حساب؟",
-  "Login": "تسجيل الدخول"
+  "Login": "تسجيل الدخول",
+  "Sign In": "تسجيل الدخول",
+  "Logout": "تسجيل الخروج"
 }
