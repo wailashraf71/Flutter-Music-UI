@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class MusicPlayer extends StatefulWidget {
   final String imageUrl;
@@ -101,7 +102,7 @@ class _MusicPlayerState extends State<MusicPlayer>
                 onPressed: () => Navigator.pop(context),
               ),
               Text(
-                'NOW PLATING FROM',
+                'Now playing from',
                 maxLines: 1,
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
@@ -114,7 +115,7 @@ class _MusicPlayerState extends State<MusicPlayer>
                   fontWeight: FontWeight.bold,
                   fontSize: 14,
                 ),
-              ),
+              ).tr(),
               IconButton(
                 icon: Icon(
                   Icons.more_horiz,
@@ -233,13 +234,13 @@ class _MusicPlayerState extends State<MusicPlayer>
         children: <Widget>[
           IconButton(
               icon: Icon(
-                Icons.replay_30,
+                Icons.forward_30,
               ),
               iconSize: 25,
               onPressed: () {}),
           IconButton(
             icon: Icon(
-              Icons.fast_rewind,
+              Icons.fast_forward,
               color: Theme.of(context).textTheme.bodyText1.color,
             ),
             iconSize: 40,
@@ -269,7 +270,7 @@ class _MusicPlayerState extends State<MusicPlayer>
           ),
           IconButton(
             icon: Icon(
-              Icons.fast_forward,
+              Icons.fast_rewind,
               color: Theme.of(context).textTheme.bodyText1.color,
             ),
             iconSize: 40,
@@ -277,7 +278,7 @@ class _MusicPlayerState extends State<MusicPlayer>
           ),
           IconButton(
               icon: Icon(
-                Icons.forward_30,
+                Icons.replay_30,
               ),
               iconSize: 25,
               onPressed: () {}),
@@ -317,7 +318,7 @@ class _MusicPlayerState extends State<MusicPlayer>
           ),
           IconButton(
               icon: Icon(
-                Icons.queue_music,
+                Icons.library_music,
                 color:
                     Theme.of(context).textTheme.bodyText1.color.withOpacity(.4),
               ),

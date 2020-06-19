@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:music/ui/app.dart';
-import 'package:music/ui/components/dummy_data.dart';
 import 'package:music/ui/screens/auth/login.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -42,7 +42,7 @@ class _RegisterState extends State<Register> {
           child: Column(
             children: <Widget>[
               Container(
-                height: MediaQuery.of(context).size.height * 0.50,
+                height: MediaQuery.of(context).size.height * 0.49,
                 color: Theme.of(context).accentColor.withOpacity(.8),
                 child: Stack(
                   children: <Widget>[
@@ -72,23 +72,23 @@ class _RegisterState extends State<Register> {
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Theme.of(context).textTheme.bodyText1.color),
-                      ),
+                      ).tr()
                     ),
                     FormTextField(
                       controller: _nameController,
-                      hint: 'FULL NAME',
+                      hint: 'Full name',
                       maxLines: 1,
                       keyboardType: TextInputType.text,
                     ),
                     FormTextField(
                       controller: _emailController,
-                      hint: 'EMAIL ADDRESS',
+                      hint: 'Email',
                       keyboardType: TextInputType.emailAddress,
                       maxLines: 1,
                     ),
                     FormTextField(
                       controller: _passwordController,
-                      hint: 'PASSWORD',
+                      hint: 'Password',
                       obscureText: true,
                       maxLines: 1,
                     ),
@@ -109,11 +109,11 @@ class _RegisterState extends State<Register> {
       child: Container(
         width: double.infinity,
         child: CupertinoButton(
-          padding: EdgeInsets.symmetric(vertical: 18),
+          padding: EdgeInsets.symmetric(vertical: 14),
           child: Text(
-            'SIGN UP',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-          ),
+            'Sign Up',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          ).tr(),
           color: Theme.of(context).textTheme.bodyText1.color,
           onPressed: () => Get.off(App(), id: 5),
         ),
@@ -131,7 +131,7 @@ class _RegisterState extends State<Register> {
             Text("Do you have an account?",
                 style: TextStyle(
                   color: Theme.of(context).hintColor,
-                )),
+                )).tr(),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 5),
               child: GestureDetector(
@@ -144,7 +144,7 @@ class _RegisterState extends State<Register> {
                             .textTheme
                             .bodyText1
                             .color,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.bold)).tr(),
               ),
             ),
           ],
@@ -191,7 +191,7 @@ class FormTextField extends StatelessWidget {
         },
         validator: validator,
         decoration: InputDecoration(
-          labelText: hint,
+          labelText: tr(hint),
           alignLabelWithHint: true,
           enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(

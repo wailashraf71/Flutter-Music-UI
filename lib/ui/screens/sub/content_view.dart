@@ -45,7 +45,7 @@ class _ContentViewState extends State<ContentView>
               },
               child: Icon(Icons.play_arrow),
             ),
-            floatingPosition: FloatingPosition(right: 12),
+            floatingPosition: FloatingPosition(left: 12),
             expandedHeight: widget.squaredImage ? 400.0 : 256.0,
             slivers: <Widget>[
               SliverAppBar(

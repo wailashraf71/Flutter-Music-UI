@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:music/ui/components/dummy_data.dart';
 import 'package:music/ui/components/widgets/genre_widget.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Search extends StatefulWidget {
   final int navId;
@@ -28,7 +29,7 @@ class _SearchState extends State<Search> {
                   style: TextStyle(
                       color: Theme.of(context).textTheme.bodyText1.color,
                       fontSize: 30,
-                      fontWeight: FontWeight.bold)),
+                      fontWeight: FontWeight.bold)).tr(),
             ),
           ),
           SliverPadding(
@@ -46,7 +47,7 @@ class _SearchState extends State<Search> {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).textTheme.bodyText1.color,
-                        fontSize: 20)),
+                        fontSize: 20)).tr(),
               ),
             ),
           ),
@@ -90,7 +91,7 @@ class _SearchState extends State<Search> {
             child: Row(
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(right: 8.0),
+                  padding: EdgeInsets.only(left: 8.0),
                   child: Icon(
                     Icons.search,
                     color: Theme.of(context).textTheme.bodyText1.color,
@@ -103,7 +104,7 @@ class _SearchState extends State<Search> {
                   style: TextStyle(
                     fontSize: 15,
                       color: Theme.of(context).textTheme.bodyText1.color.withOpacity(.42)),
-                ))
+                ).tr())
               ],
             ),
           ),

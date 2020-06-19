@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -40,7 +41,7 @@ class _LoginState extends State<Login> {
       child: Column(
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height * 0.57,
+            height: MediaQuery.of(context).size.height * 0.56,
             color: Theme.of(context).accentColor.withOpacity(.8),
             child: Stack(
               children: <Widget>[
@@ -70,17 +71,17 @@ class _LoginState extends State<Login> {
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).textTheme.bodyText1.color),
-                  ),
+                  ).tr(),
                 ),
                 FormTextField(
                   controller: _emailController,
-                  hint: 'EMAIL ADDRESS',
+                  hint: tr('hintEmail'),
                   keyboardType: TextInputType.emailAddress,
                   maxLines: 1,
                 ),
                 FormTextField(
                   controller: _passwordController,
-                  hint: 'PASSWORD',
+                  hint: tr('hintPassword'),
                   obscureText: true,
                   maxLines: 1,
                 ),
@@ -101,11 +102,11 @@ class _LoginState extends State<Login> {
       child: Container(
         width: double.infinity,
         child: CupertinoButton(
-          padding: EdgeInsets.symmetric(vertical: 18),
+          padding: EdgeInsets.symmetric(vertical: 14),
           child: Text(
-            'SIGN IN',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-          ),
+            'Sign In',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          ).tr(),
           color: Theme.of(context).textTheme.bodyText1.color,
           onPressed: () => Get.off(App(), id: 5),
         ),
@@ -123,7 +124,7 @@ class _LoginState extends State<Login> {
             Text("Don't have an account?",
                 style: TextStyle(
                   color: Theme.of(context).hintColor,
-                )),
+                )).tr(),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 5),
               child: GestureDetector(
@@ -133,7 +134,7 @@ class _LoginState extends State<Login> {
                 child: Text("Sign Up",
                     style: TextStyle(
                         color: Theme.of(context).textTheme.bodyText1.color,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.bold)).tr(),
               ),
             ),
           ],

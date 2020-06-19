@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music/ui/components/dummy_data.dart';
 import 'package:music/ui/components/widgets/song_widget.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Library extends StatefulWidget {
   final int navId;
@@ -38,7 +39,7 @@ class _LibraryState extends State<Library> with SingleTickerProviderStateMixin {
                         style: TextStyle(
                             color: Theme.of(context).textTheme.bodyText1.color,
                             fontSize: 30,
-                            fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.bold)).tr(),
                   ),
                 ),
                 SliverAppBar(
@@ -76,11 +77,11 @@ class _LibraryState extends State<Library> with SingleTickerProviderStateMixin {
                             Tab(
                               child: Padding(
                                 padding: const EdgeInsets.only(right: 5),
-                                child: Text('Favorites'),
+                                child: Text('Favorites').tr(),
                               ),
                             ),
                             Tab(
-                              child: Text('Recently Played'),
+                              child: Text('Recently played').tr(),
                             ),
                           ]),
                     ),

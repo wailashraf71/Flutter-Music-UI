@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music/ui/components/dummy_data.dart';
 import 'package:music/ui/components/widgets/song_widget.dart';
-
+import 'package:easy_localization/easy_localization.dart';
 class Trending extends StatefulWidget {
   final int navId;
 
@@ -27,7 +27,7 @@ class _TrendingState extends State<Trending> {
                     style: TextStyle(
                         color: Theme.of(context).textTheme.bodyText1.color,
                         fontSize: 30,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.bold)).tr(),
               ),
             ),
             SliverPadding(
@@ -39,7 +39,7 @@ class _TrendingState extends State<Trending> {
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).textTheme.bodyText1.color,
-                          fontSize: 20)),
+                          fontSize: 20)).tr(),
                 ),
               ),
             ),
@@ -65,11 +65,11 @@ class _TrendingState extends State<Trending> {
               sliver: SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Text('Top pop of all time',
+                  child: Text('Top pop music',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).textTheme.bodyText1.color,
-                          fontSize: 20)),
+                          fontSize: 20)).tr(),
                 ),
               ),
             ),
@@ -95,11 +95,11 @@ class _TrendingState extends State<Trending> {
               sliver: SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Text('Best covers',
+                  child: Text('Best of all time',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).textTheme.bodyText1.color,
-                          fontSize: 20)),
+                          fontSize: 20)).tr(),
                 ),
               ),
             ),

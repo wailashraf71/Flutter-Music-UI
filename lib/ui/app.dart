@@ -1,7 +1,9 @@
 import 'dart:ui';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:music/ui/components/mini_player.dart';
 import 'package:music/ui/components/theme.dart';
@@ -79,6 +81,13 @@ class _App extends State<App> {
       theme: mainThemeLight(context),
       debugShowCheckedModeBanner: false,
       navigatorKey: Get.nestedKey(index),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        EasyLocalization.of(context).delegate,
+      ],
+      supportedLocales: EasyLocalization.of(context).supportedLocales,
+      locale: EasyLocalization.of(context).locale,
       home: Padding(
         ///Todo: set this padding value according to MiniPlayers height
       padding: const EdgeInsets.only(bottom: 115),
@@ -117,15 +126,15 @@ class _App extends State<App> {
             },
             items: [
               BottomNavigationBarItem(
-                  icon: Icon(Icons.music_note), title: Text('EXPLORE')),
+                  icon: Icon(Icons.music_note), title: Text('Explore').tr()),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.whatshot), title: Text('TRENDING')),
+                  icon: Icon(Icons.whatshot), title: Text('Trending').tr()),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.search), title: Text('SEARCH')),
+                  icon: Icon(Icons.search), title: Text('Search').tr()),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.library_music), title: Text('LIBRARY')),
+                  icon: Icon(Icons.library_music), title: Text('Library').tr()),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.settings), title: Text('SETTINGS')),
+                  icon: Icon(Icons.settings), title: Text('Settings').tr()),
             ],
           ),
         ],

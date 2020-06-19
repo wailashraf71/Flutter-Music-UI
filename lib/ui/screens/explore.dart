@@ -6,7 +6,8 @@ import 'package:music/ui/components/widgets/album_widget.dart';
 import 'package:music/ui/components/widgets/artist_widget.dart';
 import 'package:music/ui/components/widgets/genre_widget.dart';
 import 'package:music/ui/components/widgets/song_widget.dart';
-
+import 'package:easy_localization/easy_localization.dart'
+    '';
 class Explore extends StatefulWidget {
   final int navId;
 
@@ -33,7 +34,7 @@ class _ExploreState extends State<Explore> {
                     style: TextStyle(
                         color: Theme.of(context).textTheme.bodyText1.color,
                         fontSize: 30,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.bold)).tr(),
               ),
             ),
             SliverPadding(
@@ -69,7 +70,7 @@ class _ExploreState extends State<Explore> {
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).textTheme.bodyText1.color,
-                          fontSize: 22)),
+                          fontSize: 22)).tr(),
                 ),
               ),
             ),
@@ -109,7 +110,7 @@ class _ExploreState extends State<Explore> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Theme.of(context).textTheme.bodyText1.color,
-                      fontSize: 22))),
+                      fontSize: 22)).tr()),
           Expanded(
             child: ListView.separated(
                 scrollDirection: Axis.horizontal,
@@ -147,7 +148,7 @@ class _ExploreState extends State<Explore> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Theme.of(context).textTheme.bodyText1.color,
-                      fontSize: 22))),
+                      fontSize: 22)).tr()),
           Expanded(
             child: ListView.separated(
                 scrollDirection: Axis.horizontal,
@@ -185,7 +186,7 @@ class _ExploreState extends State<Explore> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Theme.of(context).textTheme.bodyText1.color,
-                      fontSize: 22))),
+                      fontSize: 22)).tr()),
           Expanded(
             child: ListView.separated(
                 scrollDirection: Axis.horizontal,
@@ -219,7 +220,7 @@ class _ExploreState extends State<Explore> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Theme.of(context).textTheme.bodyText1.color,
-                      fontSize: 22))),
+                      fontSize: 22)).tr()),
           Expanded(
             child: ListView.separated(
                 scrollDirection: Axis.horizontal,

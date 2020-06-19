@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Settings extends StatefulWidget {
   final int navId;
@@ -27,7 +28,7 @@ class _SettingsState extends State<Settings> {
                     style: TextStyle(
                         color: Theme.of(context).textTheme.bodyText1.color,
                         fontSize: 30,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.bold)).tr(),
               ),
             ),
             SliverPadding(
@@ -37,7 +38,7 @@ class _SettingsState extends State<Settings> {
                     style: TextStyle(
                         color: Theme.of(context).textTheme.bodyText1.color,
                         fontSize: 22,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.bold)).tr(),
               ),
             ),
             SliverPadding(
@@ -77,8 +78,8 @@ class _SettingsState extends State<Settings> {
                                       .color,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 15,
-                                )),
-                            Text('wailashraf71@yahoo.com',
+                                )).tr(),
+                            Text('hello@example.com',
                                 style: TextStyle(
                                     color: Theme.of(context)
                                         .textTheme
@@ -121,7 +122,7 @@ class _SettingsState extends State<Settings> {
                                   Theme.of(context).textTheme.bodyText1.color,
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
-                            )),
+                            )).tr(),
                         Text('Only downloaded content will be available',
                             style: TextStyle(
                                 color: Theme.of(context)
@@ -130,7 +131,7 @@ class _SettingsState extends State<Settings> {
                                     .color
                                     .withOpacity(0.24),
                                 fontSize: 12,
-                                height: 1.5)),
+                                height: 1.5)).tr(),
                       ],
                     ),
                     Switch(value: true, onChanged: (value) {})
@@ -144,11 +145,11 @@ class _SettingsState extends State<Settings> {
             SliverPadding(
               padding: EdgeInsets.symmetric(horizontal: 15),
               sliver: SliverToBoxAdapter(
-                child: Text('Connect',
+                child: Text('Connect with us',
                     style: TextStyle(
                         color: Theme.of(context).textTheme.bodyText1.color,
                         fontSize: 22,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.bold)).tr(),
               ),
             ),
             SliverPadding(
@@ -169,8 +170,8 @@ class _SettingsState extends State<Settings> {
                                   Theme.of(context).textTheme.bodyText1.color,
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
-                            )),
-                        Text('Get to know more about the project',
+                            )).tr(),
+                        Text('Get to know more about the app',
                             style: TextStyle(
                                 color: Theme.of(context)
                                     .textTheme
@@ -178,7 +179,7 @@ class _SettingsState extends State<Settings> {
                                     .color
                                     .withOpacity(0.24),
                                 fontSize: 12,
-                                height: 1.5)),
+                                height: 1.5)).tr(),
                       ],
                     ),
                     Icon(
@@ -212,7 +213,7 @@ class _SettingsState extends State<Settings> {
                                   Theme.of(context).textTheme.bodyText1.color,
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
-                            )),
+                            )).tr(),
                         Text(
                             'Read our terms and conditions of how to use the app',
                             style: TextStyle(
@@ -222,7 +223,7 @@ class _SettingsState extends State<Settings> {
                                     .color
                                     .withOpacity(0.24),
                                 fontSize: 12,
-                                height: 1.5)),
+                                height: 1.5)).tr(),
                       ],
                     ),
                     Icon(
@@ -256,7 +257,7 @@ class _SettingsState extends State<Settings> {
                                   Theme.of(context).textTheme.bodyText1.color,
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
-                            )),
+                            )).tr(),
                         Text(
                             'Be in touch with us on social media',
                             style: TextStyle(
@@ -266,7 +267,7 @@ class _SettingsState extends State<Settings> {
                                     .color
                                     .withOpacity(0.24),
                                 fontSize: 12,
-                                height: 1.5)),
+                                height: 1.5)).tr(),
                       ],
                     ),
                     Icon(
