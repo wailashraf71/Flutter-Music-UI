@@ -101,7 +101,7 @@ class _MusicPlayerState extends State<MusicPlayer>
                 onPressed: () => Navigator.pop(context),
               ),
               Text(
-                'NOW PLATING FROM',
+                'NOW PLAYING FROM',
                 maxLines: 1,
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,

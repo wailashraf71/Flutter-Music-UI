@@ -78,7 +78,7 @@ class _SettingsState extends State<Settings> {
                                   fontWeight: FontWeight.bold,
                                   fontSize: 15,
                                 )),
-                            Text('wailashraf71@yahoo.com',
+                            Text('hello@example.com',
                                 style: TextStyle(
                                     color: Theme.of(context)
                                         .textTheme

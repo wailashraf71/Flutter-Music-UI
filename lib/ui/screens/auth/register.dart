@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:music/ui/app.dart';
-import 'package:music/ui/components/dummy_data.dart';
 import 'package:music/ui/screens/auth/login.dart';
 
 class Register extends StatefulWidget {
